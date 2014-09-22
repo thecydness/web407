@@ -55,6 +55,53 @@
 					</div>
 				</form>
 				<br />
+				<? if($contracts) : ?>
+					<h2>Contracts</h2>
+					<table class="table">
+						<tr>
+							<th>Type</th>
+							<th>Start Data</th>
+							<th>End Date</th>
+							<th>Billing Amount</th>
+							<th>Billing Frequency</th>
+							<th>Action</th>
+						</tr>
+					<? foreach($contracts as $contract) : ?>
+						<tr>
+							<td><?= $contract->type ?></td>
+							<td><?= $contract->startDate ?></td>
+							<td><?= $contract->endDate ?></td>
+							<td>$<?= $contract->billingAmount ?></td>
+							<td>Every <?= $contract->billingFrequency ?> months</td>
+							<td><a href="/index.php/page/contract/<?= $contract->id ?>">View/Edit</a></td>
+						</tr>
+					<? endforeach;  ?>
+					</table>
+				<? endif; ?>
+				<? if($hostings) : ?>
+					<h2>Hosting Accounts</h2>
+					<table class="table">
+						<tr>
+							<th>Type</th>
+							<th>Billing Amount</th>
+							<th>Billing Frequency</th>
+							<th>Start Data</th>
+							<th>End Date</th>
+							<th>Action</th>
+						</tr>
+					<? foreach($hostings as $hosting) : ?>
+						<tr>
+							<td><?= $hosting->type ?></td>
+							<td>$<?= $hosting->billingAmount ?></td>
+							<td>Every <?= $hosting->billingFrequency ?> months</td>
+							<td><?= $hosting->startDate ?></td>
+							<td><?= $hosting->endDate ?></td>
+							<td><a href="/index.php/page/hosting/<?= $hosting->id ?>">View/Edit</a></td>
+						</tr>
+					<? endforeach;  ?>
+					</table>
+				<? endif; ?>
+				<br />
 				<? if($previous) : ?>
 					<a class="button" href="<?= $previous->id ?>">Previous Client</a>
 				<? endif; ?>

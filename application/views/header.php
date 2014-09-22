@@ -25,7 +25,7 @@
 						<li<? if( $_SERVER['REQUEST_URI'] == '/' ) echo ' class="active"' ?>><a href="/">Home</a></li>
 						<li<? if( $_SERVER['REQUEST_URI'] == '/index.php/page/clients' ) echo ' class="active"' ?>><a href="/index.php/page/clients">Clients</a></li>
 						<li<? if( $_SERVER['REQUEST_URI'] == '/index.php/page/contracts' ) echo ' class="active"' ?>><a href="/index.php/page/contracts">Contracts</a></li>
-						<li<? if( $_SERVER['REQUEST_URI'] == '/index.php/page/hosting' ) echo ' class="active"' ?>><a href="/index.php/page/hosting">Hosting</a></li>
+						<li<? if( $_SERVER['REQUEST_URI'] == '/index.php/page/hostings' ) echo ' class="active"' ?>><a href="/index.php/page/hostings">Hosting</a></li>
 					</ul>
 				</div>
 			</div>

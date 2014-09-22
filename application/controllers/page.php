@@ -6,6 +6,8 @@ class Page extends CI_Controller {
 	{
         parent::__construct();
         $this->load->model('client', 'Clients');
+        $this->load->model('contract', 'Contracts');
+		$this->load->model('hosting', 'Hostings');
     }
 
 	public function index()
@@ -32,6 +34,10 @@ class Page extends CI_Controller {
 	public function client($id)
 	{
 		$data['client']		= $this->Clients->get($id);
+
+		$data['contracts']	= $this->Contracts->find($id);
+		$data['hostings']	= $this->Hostings->find($id);
+
 		$data['next']		= $this->Clients->get_next($data['client']->lastName) ? $this->Clients->get_next($data['client']->lastName) : false;
 		$data['previous']	= $this->Clients->get_previous($data['client']->lastName) ? $this->Clients->get_previous($data['client']->lastName) : false;
 
@@ -64,17 +70,44 @@ class Page extends CI_Controller {
 	{
 		$data['title']		= 'Contracts';
 		$data['content']	= 'Welcome';
+
+		$data['contracts']	= $this->Contracts->get_all();
+
 		$this->load->view('header', $data);
-		$this->load->view('home', $data);
+		$this->load->view('contracts', $data);
 		$this->load->view('footer', $data);
 	}
 
-	public function hosting()
+	public function contract($id)
 	{
 		$data['title']		= 'Contracts';
-		$data['content']	= 'Welcome';
+
+		$data['contract']	= $this->Contracts->get($id);
+
 		$this->load->view('header', $data);
-		$this->load->view('home', $data);
+		$this->load->view('contract', $data);
+		$this->load->view('footer', $data);
+	}
+
+	public function hostings()
+	{
+		$data['title']		= 'Hosting Accounts';
+
+		$data['hostings']	= $this->Hostings->get_all();
+
+		$this->load->view('header', $data);
+		$this->load->view('hostings', $data);
+		$this->load->view('footer', $data);
+	}
+
+	public function hosting($id)
+	{
+		$data['title']		= 'Hosting Account';
+
+		$data['hosting']	= $this->Hostings->get($id);
+
+		$this->load->view('header', $data);
+		$this->load->view('hosting', $data);
 		$this->load->view('footer', $data);
 	}
 }
