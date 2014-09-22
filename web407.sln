@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{1863889A-00DF-4350-BA39-669CA949CB81}") = "web407", "web407.phpproj", "{D7A272A7-C4FD-46EF-B174-8BD2D4F5EE74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Local|PHP 5.5 = Local|PHP 5.5
+		Production|PHP 5.5 = Production|PHP 5.5
+		Staging|PHP 5.5 = Staging|PHP 5.5
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7A272A7-C4FD-46EF-B174-8BD2D4F5EE74}.Local|PHP 5.5.ActiveCfg = Local|PHP 5.5
+		{D7A272A7-C4FD-46EF-B174-8BD2D4F5EE74}.Local|PHP 5.5.Deploy.0 = Local|PHP 5.5
+		{D7A272A7-C4FD-46EF-B174-8BD2D4F5EE74}.Production|PHP 5.5.ActiveCfg = Production|PHP 5.5
+		{D7A272A7-C4FD-46EF-B174-8BD2D4F5EE74}.Production|PHP 5.5.Deploy.0 = Production|PHP 5.5
+		{D7A272A7-C4FD-46EF-B174-8BD2D4F5EE74}.Staging|PHP 5.5.ActiveCfg = Staging|PHP 5.5
+		{D7A272A7-C4FD-46EF-B174-8BD2D4F5EE74}.Staging|PHP 5.5.Deploy.0 = Staging|PHP 5.5
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
